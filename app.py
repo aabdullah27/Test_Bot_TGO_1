@@ -2,6 +2,7 @@ import streamlit as st
 from llama_index.core import VectorStoreIndex, Document, Settings
 from llama_index.vector_stores.faiss import FaissVectorStore
 from llama_index.embeddings.gemini import GeminiEmbedding
+from llama_index.llms.groq import Groq
 import faiss
 from docx import Document as DocxDocument
 import pymupdf4llm
@@ -99,7 +100,7 @@ with st.sidebar:
         
         if uploaded_files and st.session_state.api_key and st.session_state.google_api_key:
             with st.spinner("Processing documents..."):
-                llm = Groq(api_key=st.session_state.api_key, model="mixtral-8x7b-32768")
+                llm = Groq(api_key=st.session_state.api_key, model="llama-3.3-70b-versatile")
                 embed_model = GeminiEmbedding(api_key=st.session_state.google_api_key)
                 
                 Settings.embed_model = embed_model

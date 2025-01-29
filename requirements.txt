@@ -1,0 +1,11 @@
+streamlit
+groq
+faiss-cpu
+python-docx
+llama-index
+llama-index-llms-groq
+llama-index-llms-gemini
+llama-index-embeddings-gemini
+llama-index-embeddings-huggingface
+llama-index-vector-stores-faiss
+pymupdf4llm
